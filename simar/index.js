@@ -3,6 +3,8 @@ const app=express();
 const fs=require('fs');
 app.use(express.json());
 
+const fakePersonJson=require('./fakeperson.json');
+
 app.get('/',async(req,res)=>{
     res.send('Chal rha hai')
 })
@@ -11,6 +13,10 @@ app.get('/',async(req,res)=>{
 app.get('/run-puppeteer',async(req,res)=>{
     run();
     res.send('Fake Identity and Image Generated Locally on the System')
+})
+
+app.get('/fetch-json',async(req,res)=>{
+    res.json(fakePersonJson);
 })
 
 app.listen(3001||process.env.PORT,()=>{
