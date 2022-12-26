@@ -49,7 +49,7 @@ async function run(){
     console.log('Mother\'s Maiden Name :',mumFromSite);
 
     const ssnFromSite=await page.evaluate(()=>document.querySelector('#details .content .info .content .extra .dl-horizontal:nth-child(2) dd').innerText);
-    const slicedSsn=ssnFromSite.slice(0,12);
+    const slicedSsn=ssnFromSite.slice(0,11);
     console.log('SSN :',slicedSsn);
 
     const geoFromSite=await page.evaluate(()=>document.querySelector('#details .content .info .content .extra .dl-horizontal:nth-child(3) dd').innerText);
@@ -68,7 +68,11 @@ async function run(){
     console.log('Zodiac :',zodiacFromSite);
 
     const emailFromSite=await page.evaluate(()=>document.querySelector('#details .content .info .content .extra .dl-horizontal:nth-child(12) dd').innerText);
-    console.log('Email :',emailFromSite);
+    const slicedEmail=emailFromSite.slice(0,-57);
+    console.log('Email :',slicedEmail);
+
+    const userNameFromSite=await page.evaluate(()=>document.querySelector('#details .content .info .content .extra .dl-horizontal:nth-child(13) dd').innerText);
+    console.log('Username :',userNameFromSite);
 
     const passwordFromSite=await page.evaluate(()=>document.querySelector('#details .content .info .content .extra .dl-horizontal:nth-child(14) dd').innerText);
     console.log('Password :',passwordFromSite);
@@ -112,19 +116,20 @@ async function run(){
     await page.goto("https://thispersondoesnotexist.com/",{waitUntil:'load',timeout:0});
 
     //download image code for puppeteer
-    await page.screenshot({path:'randomperson.png',fullPage:true});
+    await page.screenshot({path:'./public/randomperson.png',fullPage:true});
 
     const fakePerson={
         Name:userFromSite,
         Address:addressFromSite,
         MotherMaidenName:mumFromSite,
-        SSN:ssnFromSite,
+        SSN:slicedSsn,
         geoPoints:geoFromSite,
         PhoneNumber:phnFromSite,
         Birthday:bDayFromSite,
         Age:ageFromSite,
         Zodiac:zodiacFromSite,
-        Email:emailFromSite,
+        Email:slicedEmail,
+        Username:userNameFromSite,
         Password:passwordFromSite,
         BrowserAgent:browserAgentFromSite,
         DEBITCARD:visaorMasterCardFromSite,
