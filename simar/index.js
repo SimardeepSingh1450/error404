@@ -5,10 +5,12 @@ app.use(express.json());
 
 const fakePersonJson=require('./fakeperson.json');
 
-app.get('/',async(req,res)=>{
-    res.send('Chal rha hai')
-})
+//uplaoding the image to frontend view
+app.use('/fetch-image',express.static('public'));
 
+app.get('/',async(req,res)=>{
+    res.send('Server is working Fine')
+})
 
 app.get('/run-puppeteer',async(req,res)=>{
     run();
@@ -144,20 +146,6 @@ async function run(){
         }
     })
 
-
-    //uplaoding the image to tempfile
-    // await page.goto("https://tempfile.io/en",{waitUntil:'load',timeout:0});
-
-    // //upload file button
-    // const [filechooser]=await Promise.all([
-    //     page.waitForFileChooser(),
-    //     page.click(".btn btn-primary btn-lg px-5")
-    // ]);
-    // //passing the file
-    // filechooser.accept(["randomperson.jpg"]);
-
-    // //waiting for the upload process
-    // await page.waitForTimeout(6000)
 
 
     // await browser.close();
