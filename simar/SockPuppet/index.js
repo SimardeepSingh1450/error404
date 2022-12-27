@@ -40,6 +40,9 @@ async function run(){
     await page.goto('https://www.fakenamegenerator.com/', {waitUntil: 'load', timeout: 0});
 
     const userFromSite=await page.evaluate(()=> document.querySelector('#details .content .info .content .address h3').innerText);
+    const nameSplitterArray=userFromSite.split(" ");
+    const firstNameFromSite=nameSplitterArray[0];
+    const lastNameFromSite=nameSplitterArray[2];
     console.log('User :',userFromSite);
 
     const addressFromSite=await page.evaluate(()=> document.querySelector('#details .content .info .content .address .adr').innerText);
@@ -120,6 +123,8 @@ async function run(){
 
     const fakePerson={
         Name:userFromSite,
+        firstName:firstNameFromSite,
+        lastName:lastNameFromSite,
         Address:addressFromSite,
         MotherMaidenName:mumFromSite,
         SSN:slicedSsn,
