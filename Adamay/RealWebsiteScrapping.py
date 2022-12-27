@@ -1,15 +1,28 @@
 import requests,webbrowser
 import json
 from bs4 import BeautifulSoup
-user_input=input("Search Keyword:")
+import re
+
+user_inp = input("Search Keyword:")
+user_input=''
+for i in range(len(user_inp)):
+    if user_inp[i] == ' ':
+        user_input = user_input + '+'
+    else:
+        user_input = user_input + user_inp[i]
+
 print("Bringing top results.")
-res = requests.get('https://www.google.com/search?q='+user_input)
-soup = BeautifulSoup(res.text, 'lxml')
-results = soup.find_all('span', class_='BNeawe')
+res = requests.get('https://www.google.com/search?q=' + user_input)
+soup = BeautifulSoup(res.text, 'html.parser')
+
+results = soup.find_all('div', class_='egMi0 kCrYT')
+imres='https://www.google.com/search?tbm=isch&q='+ user_input
+vidres='https://www.google.com/search?tbm=vid&q='+user_input
+
+
 l = len(results)
 
 li = []
-
 c = user_input + '.json'
 
 def find(URL):
@@ -18,11 +31,15 @@ def find(URL):
 for i in results[:l]:
 
     j = str(i)
-    if 'url' in j:
-        li.append(find(j)[0])
-    else:
-        continue
+    li.append(find(j))
 
-print(li)
+li1=[imres,vidres]
+while [] in li:
+    li.remove([])
+for i in range(len(li)):
+    li1.append(li[i][0])
+print(li1)
+
 with open(c, 'w+') as f:
-    json.dump(li, f, indent=4)
+    json.dump(li1, f, indent=4)
+
