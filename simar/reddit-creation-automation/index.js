@@ -19,7 +19,7 @@ async function run(){
 
 const browser=await puppeteer.launch({
     headless:false,
-    defaultViewport:false,
+    defaultViewport:false
     // args: [
     //   `--disable-extensions-except=${pathToExtension}`,
     //   `--load-extension=${pathToExtension}`,
