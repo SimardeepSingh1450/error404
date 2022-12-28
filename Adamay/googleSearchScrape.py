@@ -23,7 +23,7 @@ vidres='https://www.google.com/search?tbm=vid&q='+user_input
 l = len(results)
 
 li = []
-c = user_input + '.json'
+c ='./Adamay/googleSearch.json'
 
 def find(URL):
   url = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\), ]|(?:%[0-9a-fA-F][0-9a-fA-F]))+',URL)

@@ -1,9 +1,12 @@
-import requests,webbrowser
+import requests, webbrowser
 import json
 from bs4 import BeautifulSoup
 import re
+import sys
 
-user_inp = input("Search Keyword:")
+# user_inp = input("Search Keyword:")
+user_inp=sys.argv[1]
+print('Recieved in python :'+user_inp)
 user_input=''
 for i in range(len(user_inp)):
     if user_inp[i] == ' ':
@@ -23,7 +26,7 @@ vidres='https://www.google.com/search?tbm=vid&q='+user_input
 l = len(results)
 
 li = []
-c = user_input + '.json'
+c ='./googleSearch.json'
 
 def find(URL):
   url = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\), ]|(?:%[0-9a-fA-F][0-9a-fA-F]))+',URL)
