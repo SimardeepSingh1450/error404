@@ -1,7 +1,7 @@
 
 # Eye Of Sauron :
 
-<img src="https://i.gifer.com/origin/e9/e9cd81c935d85d2b984b3cd3cae1a5c8.gif" style="height: 100px;"/>
+<img src="https://i.gifer.com/origin/e9/e9cd81c935d85d2b984b3cd3cae1a5c8.gif" style="height: 300px;"/>
 
 # Scraping Resources with OSNIT Practices
 
