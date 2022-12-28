@@ -15,6 +15,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.firefox.options import Options
 import sys
 import json
 
@@ -22,7 +23,10 @@ import json
 
 def searchReddit(query):
     PATH = "./geckodriver"
-    driver = webdriver.Firefox(executable_path=PATH)
+    options = Options()
+    options.headless = True
+    driver = webdriver.Firefox(executable_path=PATH, options=options)
+
     query.replace(' ', "%20")
     url = f"https://www.reddit.com/search/?q={query}"
     driver.get(url)

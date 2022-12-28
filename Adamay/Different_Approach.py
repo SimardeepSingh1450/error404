@@ -1,4 +1,4 @@
-import requests,webbrowser
+import requests, webbrowser
 import json
 from bs4 import BeautifulSoup
 import re
