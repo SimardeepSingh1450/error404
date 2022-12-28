@@ -22,15 +22,17 @@ def searchUsername(query, timeout=1):
         final[temp[0:indx].strip()] = temp[indx+1:].strip()
         
     file.close()
-    p1 = subprocess.Popen([f'rm -f {query}.txt'], shell=True)
+    p1 = subprocess.Popen([f'rm -f ./{query}.txt'], shell=True)
     p1.wait()
     return final
 
 
 
-# query = "simardeep"
+# query = "ronaldo"
 query=sys.argv[1]
 timeout = 1
+# p2 = subprocess.Popen(['pwd >> test.txt'], shell=True)
+# p2.wait()
 output = searchUsername(query,timeout)
 with open('output.json', 'w') as f:
     json.dump(output,f, indent=4)
