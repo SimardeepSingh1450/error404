@@ -13,7 +13,7 @@
 #### Intergrating Google Maps API with all modes (street view,top view,etc..)
 #### https://developers.google.com/maps/documentation/embed/get-api-key
 
-## OSINT (Discovering Domain Names)
+## OSINT (Discovering User ID's)
 
 #### https://github.com/sherlock-project/sherlock [Sherlock Python Library]
 
