@@ -1,6 +1,13 @@
-const {spawn}=require('child_process');
-let usernameInput="salmankhan"
-const childPython=spawn('python',['main.py',JSON.stringify(usernameInput)]);
-childPython.stdout.on('data',(data)=>{
-    console.log('Ran python Sherlock Code')
-})
+let usernameInput="joeBiden"
+
+
+var exec = require('child_process').exec;
+exec(`python3 main.py ${usernameInput}`,
+    function (error, stdout, stderr) {
+        console.log('stdout: ' + stdout);
+        console.log('stderr: ' + stderr);
+        if (error !== null) {
+             console.log('exec error: ' + error);
+        }
+    });
+

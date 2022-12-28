@@ -28,7 +28,7 @@ def searchUsername(query, timeout=1):
 
 
 
-query = "elonmusk"
+query = "ronaldo"
 timeout = 1
 output = searchUsername(query,timeout)
 with open('output.json', 'w') as f:
