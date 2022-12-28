@@ -1,7 +1,7 @@
 
 # Eye Of Sauron :
 
-<img src="https://i.gifer.com/origin/e9/e9cd81c935d85d2b984b3cd3cae1a5c8.gif" style="height: 20vw"/>
+<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c8f676f1-f227-419e-a9b3-b5b415affa94/d7z7ltz-e1ef1e82-ec28-41a2-a1c7-71ade8412d9e.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2M4ZjY3NmYxLWYyMjctNDE5ZS1hOWIzLWI1YjQxNWFmZmE5NFwvZDd6N2x0ei1lMWVmMWU4Mi1lYzI4LTQxYTItYTFjNy03MWFkZTg0MTJkOWUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7qaZrW8Ij8iUE7VS4PX9tfZRm3dXy5kYoemaBUcRl-o" style="height: 20vw"/>
 
 # Scraping Resources with OSNIT Practices
 
