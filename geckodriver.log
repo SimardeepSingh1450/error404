@@ -1,0 +1,13 @@
+1672229464236	geckodriver	INFO	Listening on 127.0.0.1:62423
+1672229464726	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "62424" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/zn/rnq281tx5yxghx89dy_dssm80000gn/T/rust_mozprofile7TxF94"
+*** You are running in headless mode.
+1672229465508	Marionette	INFO	Marionette enabled
+1672229465583	Marionette	INFO	Listening on port 62431
+Read port: 62431
+WebDriver BiDi listening on ws://127.0.0.1:62424
+1672229465832	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/zn/rnq281tx5yxghx89dy_dssm80000gn/T/rust_mozprofile7TxF94/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:62424/devtools/browser/1536c629-6d06-4240-8380-be76868f9dfe
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.9f8d3f61ec2c057cd0e6.js, line 1: unreachable code after return statement
+1672229475776	Marionette	INFO	Stopped listening on port 62431
