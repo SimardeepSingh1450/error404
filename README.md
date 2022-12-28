@@ -27,8 +27,8 @@
 
 # Python Libraries Used
 
-#### 1. Beautiful Soap
-#### 2. Seleneium
+#### 1. Beautiful Soup
+#### 2. Selenium
 
 
 # Javascript Packages Used
