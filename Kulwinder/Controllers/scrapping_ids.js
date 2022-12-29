@@ -28,10 +28,9 @@ const authenticate = async (page) => {
 };
 const search = async (page, search_query) => {
   try {
-    await page.type(
-      ".css-1dbjc4n.r-16y2uox.r-1wbh5a2 > div > input",
-      search_query
-    );
+    await page.click("a[href='/explore']");
+    await page.waitForSelector("input[placeholder='Search Twitter']");
+    await page.type("input[placeholder='Search Twitter']", search_query + " ");
     await page.keyboard.press("Enter");
   } catch (err) {
     console.log(err);
@@ -92,11 +91,7 @@ const scrape_ids = async (page, itemTargetCount) => {
 };
 const twitter_id_scrapping_fun = async (search_query) => {
   // const search_query = req.body.search_query;
-  const browser = await puppeteer.launch({
-    headless: false,
-
-    defaultViewport: false,
-  });
+  const browser = await puppeteer.launch();
   const pg = await browser.newPage();
   await pg.goto("https://twitter.com/i/flow/login", {
     waitUntil: "networkidle0",

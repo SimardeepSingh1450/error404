@@ -24,10 +24,9 @@ const authenticate = async (page) => {
 };
 const search = async (page, search_query) => {
   try {
-    await page.type(
-      ".css-1dbjc4n.r-16y2uox.r-1wbh5a2 > div > input",
-      search_query + " "
-    );
+    await page.click("a[href='/explore']");
+    await page.waitForSelector("input[placeholder='Search Twitter']");
+    await page.type("input[placeholder='Search Twitter']", search_query + " ");
     await page.keyboard.press("Enter");
   } catch (err) {
     console.log(err);
@@ -97,9 +96,7 @@ const scrolling = async (page) => {
 
 const twitter_tweets_scrapping_fun = async (search_query) => {
   const browser = await puppeteer.launch({
-    headless: false,
-
-    defaultViewport: false,
+    headless: true,
   });
   const pg = await browser.newPage();
   await pg.goto("https://twitter.com/i/flow/login", {
@@ -113,11 +110,10 @@ const twitter_tweets_scrapping_fun = async (search_query) => {
     waitUntil: "networkidle2",
   });
   await search(pg, search_query);
-  // pg.evaluate()
   const tweets_scrapped = await testing(pg, 12);
   let uniqueItems = [...new Set(tweets)];
   const tweet_data = JSON.stringify(uniqueItems);
-  // console.log(tweet_data);
+
   fs.writeFile("./data/tweets_data.json", tweet_data, function (err) {
     if (err) {
       return console.log(err);
@@ -125,7 +121,7 @@ const twitter_tweets_scrapping_fun = async (search_query) => {
 
     console.log("The file was saved!");
   });
-  // browser.close();
+  browser.close();
   return tweet_data;
 };
 module.exports = twitter_tweets_scrapping_fun;
