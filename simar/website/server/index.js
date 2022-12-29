@@ -33,6 +33,8 @@ app.put("/update/:id", putFn);
 
 //DELETE Operation :
 app.delete("/delete/:id", deleteFn);
+
+//twitter scrapping operations
 app.use("/tweets", require("./routes/top_tweet_scrap_route"));
 app.use("/people", require("./routes/top_people_scrap_route"));
 
