@@ -5,11 +5,13 @@ section{
     align-items: center;
     color:white;
     scroll-snap-align: start;
+    flex-direction: column;
 }
 
 .container{
     scroll-snap-type: y mandatory;
     overflow-y:scroll;
+    height: 100vh;
 }
 
 .one{
@@ -20,7 +22,7 @@ section{
     background: red;
 }
 
-.three{
+.third{
     background: blue;
 }
 

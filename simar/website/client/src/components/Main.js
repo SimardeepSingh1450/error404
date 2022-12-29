@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/Main.css'
+import Maps from './Maps'
 
 const Main = () => {
   return (
@@ -8,7 +9,8 @@ const Main = () => {
         <h1>First Page</h1>
         </section>
         <section className='two'>
-        <h1>Second Page</h1>
+        <h1>Google Maps</h1>
+        <Maps/>
         </section>
         <section className='third'>
         <h1>Third Page</h1>
