@@ -134,6 +134,8 @@ async function run(){
         Age:ageFromSite,
         Zodiac:zodiacFromSite,
         Email:slicedEmail,
+        gmail:'kannadanna1450@gmail.com',
+        gmailPass:'kannadanna2311',
         Username:userNameFromSite,
         Password:passwordFromSite,
         BrowserAgent:browserAgentFromSite,
