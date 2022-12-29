@@ -20,8 +20,8 @@ useEffect(()=>{
 },[inputLocation])
 
   return (
-    <div>
-      <input onChange={(e)=>{setInputLocation(e.target.value)}} style={{height:'5vw'}} placeholder='Enter Location'/>
+    <div style={{display:'flex',flexDirection:'column'}}>
+      <input onChange={(e)=>{setInputLocation(e.target.value)}} style={{height:'50px'}} placeholder='Enter Location'/>
 
 { inputLocation? <iframe title='Map'
   width="450"
