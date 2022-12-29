@@ -110,13 +110,17 @@ const twitter_id_scrapping_fun = async (search_query) => {
   let uniqueItems = [...new Set(complete_data_of_people)];
   const people_data = JSON.stringify(uniqueItems);
   console.log(people_data);
-  fs.writeFile("./data/id_data.json", people_data, function (err) {
-    if (err) {
-      return console.log(err);
-    }
+  fs.writeFile(
+    "./json-code/Twitter_Scrapping/data/id_data.json",
+    people_data,
+    function (err) {
+      if (err) {
+        return console.log(err);
+      }
 
-    console.log("The file was saved!");
-  });
+      console.log("The file was saved!");
+    }
+  );
   return people_data;
 };
 module.exports = twitter_id_scrapping_fun;

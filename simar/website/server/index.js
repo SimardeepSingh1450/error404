@@ -1,6 +1,6 @@
-const express=require('express');
-const app=express();
-const cors=require('cors');
+const express = require("express");
+const app = express();
+const cors = require("cors");
 
 //Third party middleware(CROSS ORIGIN RESOURCE SHARING)
 app.use(cors());
@@ -12,26 +12,31 @@ app.use(express.json());
 //and Data-2 as an ID for identification of the Object
 
 //Connection to DB :
-require('./config/connection');
+require("./config/connection");
 
 //Importing Controller Functions :
-const getFn=require('./controllers/GET');
-const postFn=require('./controllers/POST');
-const putFn=require('./controllers/PUT');
-const deleteFn=require('./controllers/DELETE');
+const getFn = require("./controllers/GET");
+const postFn = require("./controllers/POST");
+const putFn = require("./controllers/PUT");
+const deleteFn = require("./controllers/DELETE");
 
 //Making Options for CRUD :
 //Read Operation :
-app.get('/get',getFn);
+
+app.get("/get", getFn);
 
 //Post Operation :
-app.post('/post/:datafromparams',postFn);
+app.post("/post/:datafromparams", postFn);
 
 //PUT Operation :
-app.put('/update/:id',putFn);
+app.put("/update/:id", putFn);
 
 //DELETE Operation :
-app.delete('/delete/:id',deleteFn);
+app.delete("/delete/:id", deleteFn);
+app.use("/tweets", require("./routes/top_tweet_scrap_route"));
+app.use("/people", require("./routes/top_people_scrap_route"));
 
-const port=process.env.PORT||3001;
-app.listen(port,()=>{console.log('Server is running on 3001 || PORT...')})
+const port = process.env.PORT || 3001;
+app.listen(port, () => {
+  console.log("Server is running on 3001 || PORT...");
+});
