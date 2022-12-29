@@ -51,7 +51,7 @@ def searchReddit(query):
     return data
 
 
-query = sys.argv[1]
+query = ' '.join(sys.argv[1:])
 # query="pewdiepie"
 data = searchReddit(query)
 with open('./reddit.json', 'w') as f:
