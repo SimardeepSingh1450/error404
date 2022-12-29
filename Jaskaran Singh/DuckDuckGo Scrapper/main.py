@@ -5,6 +5,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.options import Options
 import json
+import sys
+import time
 
 
 def searchNews(query):
@@ -13,11 +15,12 @@ def searchNews(query):
     options = Options()
     options.headless = True
     driver = webdriver.Firefox(executable_path=PATH, options=options)
-    url = "https://duckduckgo.com/"
+    # driver = webdriver.Firefox(executable_path=PATH)
+    url = f"https://duckduckgo.com/{query}"
     driver.get(url)
-    search = driver.find_element(By.ID, 'searchbox_input')
-    search.send_keys(query)
-    search.send_keys(Keys.RETURN)
+    # search = driver.find_element(By.ID, 'searchbox_input')
+    # search.send_keys(query)
+    # search.send_keys(Keys.RETURN)
     try:
         news = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.LINK_TEXT, 'News')))
     except:
@@ -48,11 +51,9 @@ def searchNews(query):
     return data
 
 
-query = 'messi'
+query = ' '.join(sys.argv[1:])
 output = searchNews(query)
 with open('output.json', 'w') as f:
     json.dump(output,f,indent=4)
 
     
-
-
