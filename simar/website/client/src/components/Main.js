@@ -7,15 +7,15 @@ const Main = () => {
   return (
     <div className="container">
       <section className="one">
-        <h1>First Page</h1>
-        <Sockpuppet />
+        <h1>Eye Of Sauron</h1>
       </section>
       <section className="two">
         <h1>Google Maps</h1>
         <Maps />
       </section>
       <section className="third">
-        <h1>Third Page</h1>
+      <h1>Third Page</h1>
+      <Sockpuppet />
       </section>
     </div>
   );
