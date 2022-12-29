@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
+
+
 //Third party middleware(CROSS ORIGIN RESOURCE SHARING)
 app.use(cors());
 
@@ -40,6 +42,34 @@ app.use("/sockpuppet", require("./routes/sockpuppet_generator"));
 //twitter scrapping operations
 app.use("/tweets", require("./routes/top_tweet_scrap_route"));
 app.use("/people", require("./routes/top_people_scrap_route"));
+
+//duckduckGo Operations
+const {runPythonDuck}=require('./json-code/duckduckgo-linker/index'); 
+app.get('/run-duck-python-scrape/:searchField',runPythonDuck);
+
+const {attainduckJson}=require('./json-code/duckduckgo-linker/index');
+app.get('/get-duck-data',attainduckJson);
+
+//googleSearch Operations
+const {runGoogleScrape}=require('./json-code/python-js-google-search-linker/index');
+app.get('/run-python-googleSearch/:searchField',runGoogleScrape);
+
+const {fetchGoogleJson}=require('./json-code/python-js-google-search-linker/index');
+app.get('/fetch-googleScrape',fetchGoogleJson);
+
+//reddit Operations
+const {runRedditPythonCode}=require('./json-code/python-js-reddit-linker/index');
+app.get('/run-reddit-python-scrape/:searchField',runRedditPythonCode);
+
+const {getRedditJson}=require('./json-code/python-js-reddit-linker/index');
+app.get('/get-reddit-data',getRedditJson);
+
+//sherlock Operations
+const {runPythonSherlock}=require('./json-code/sherlock-userid-scrapper/index');
+app.get('/python-sherlock/:userName',runPythonSherlock);
+
+const {getSherlockJson}=require('./json-code/sherlock-userid-scrapper/index');
+app.get('/fetch-sherlock-json',getSherlockJson);
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {

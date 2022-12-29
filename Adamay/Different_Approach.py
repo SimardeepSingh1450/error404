@@ -3,9 +3,11 @@ import json
 from bs4 import BeautifulSoup
 import re
 from urllib.parse import urlparse
+import sys
 
 
-user_inp = input("Search Keyword:")
+# user_inp = input("Search Keyword:")
+user_inp=' '.join(sys.argv[1:])
 user_input=''
 for i in range(len(user_inp)):
     if user_inp[i] == ' ':
@@ -29,7 +31,7 @@ l = len(results)
 li = []
 lit=[]
 
-c = user_input + '.json'
+c ='googleSearch.json'
 
 def findDomain(URL):
     domain = urlparse(URL).netloc

@@ -1,12 +1,10 @@
-const express=require('express');
-const app=express();
 let sherlockJson;
 
-app.get('/python-sherlock/:userName',async(req,res)=>{
+const runPythonSherlock=async(req,res)=>{
     let usernameInput=req.params.userName;
     //python code call
     var exec = require('child_process').exec;
-    exec(`python3 main.py ${usernameInput}`,
+    exec(`python3 ./json-code/sherlock-userid-scrapper/main.py ${usernameInput}`,
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
@@ -15,15 +13,17 @@ app.get('/python-sherlock/:userName',async(req,res)=>{
         }
     });
     res.send('Ran Sherlock Python Code')
-})
+};
 
-app.get('/fetch-sherlock-json',async(req,res)=>{
-    sherlockJson=require('./output.json');
+
+const getSherlockJson=async(req,res)=>{
+    sherlockJson=require('../../sherlock.json');
     res.json(sherlockJson);
-})
+}
+
+module.exports={runPythonSherlock,getSherlockJson};
 
 
-
-app.listen(3001,()=>{
-    console.log('Server is running on 3001..')
-})
+// app.listen(3001,()=>{
+//     console.log('Server is running on 3001..')
+// })

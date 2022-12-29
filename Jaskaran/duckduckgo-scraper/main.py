@@ -53,6 +53,7 @@ def searchNews(query):
 
 
 query = ' '.join(sys.argv[1:])
+# query="duckirony"
 output = searchNews(query)
 with open('output.json', 'w') as f:
     json.dump(output,f,indent=4)
