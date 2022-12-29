@@ -13,8 +13,9 @@ def searchNews(query):
     PATH = "./geckodriver"
     data = []
     options = Options()
+    PATH_TO_DEV_NULL = '/dev/null'
     options.headless = True
-    driver = webdriver.Firefox(executable_path=PATH, options=options)
+    driver = webdriver.Firefox(executable_path=PATH, options=options, service_log_path=PATH_TO_DEV_NULL)
     # driver = webdriver.Firefox(executable_path=PATH)
     url = f"https://duckduckgo.com/{query}"
     driver.get(url)

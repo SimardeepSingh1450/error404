@@ -29,7 +29,8 @@ def searchUsername(query, timeout=1):
 
 
 # query = "ronaldo"
-query=sys.argv[1]
+# query=sys.argv[1]
+query = ' '.join(sys.argv[1:])
 timeout = 1
 # p2 = subprocess.Popen(['pwd >> test.txt'], shell=True)
 # p2.wait()
