@@ -14,9 +14,13 @@ const Main = () => {
         <Maps />
       </section>
       <section className="third">
-      <h1>Third Page</h1>
-      <Sockpuppet />
+        <h1>Third Page</h1>
+        <Sockpuppet />
       </section>
+      {/* <section className="one">
+      <h1>Fourth Page</h1>
+      <Sockpuppet />
+      </section> */}
     </div>
   );
 };
