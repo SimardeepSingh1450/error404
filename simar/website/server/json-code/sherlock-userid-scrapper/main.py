@@ -28,7 +28,7 @@ def searchUsername(query, timeout=1):
 
 
 
-# query = "ronaldo"
+# query = "jod"
 # query=sys.argv[1]
 query = ' '.join(sys.argv[1:])
 timeout = 1
