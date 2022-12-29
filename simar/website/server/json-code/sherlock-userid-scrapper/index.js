@@ -4,7 +4,7 @@ const runPythonSherlock=async(req,res)=>{
     let usernameInput=req.params.userName;
     //python code call
     var exec = require('child_process').exec;
-    exec(`python3 ./json-code/sherlock-userid-scrapper/main.py ${usernameInput}`,
+    exec(`cd ./json-code/sherlock-userid-scrapper && python3 main.py ${usernameInput}`,
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);

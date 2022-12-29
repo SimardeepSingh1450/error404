@@ -35,5 +35,5 @@ timeout = 1
 # p2 = subprocess.Popen(['pwd >> test.txt'], shell=True)
 # p2.wait()
 output = searchUsername(query,timeout)
-with open('sherlock.json', 'w') as f:
+with open('../../sherlock.json', 'w') as f:
     json.dump(output,f, indent=4)
