@@ -3,6 +3,7 @@ import "../css/Main.css";
 import Maps from "./Maps";
 import Sockpuppet from "./Sockpuppet";
 import Twitter_Account from "./Twitter_Accounts";
+import Twitter_Tweets from "./Twitter_Tweets";
 
 const Main = () => {
   return (
@@ -21,6 +22,10 @@ const Main = () => {
       <section className="one">
         <h1>Fourth Page</h1>
         <Twitter_Account />
+      </section>
+      <section className="two">
+        <h1>Fifth Page</h1>
+        <Twitter_Tweets />
       </section>
     </div>
   );

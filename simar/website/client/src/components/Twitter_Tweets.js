@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
 
-const Twitter_Account = () => {
+const Twitter_Tweets = () => {
   const [accounts_data_arr, set_accounts_data_arr] = useState();
   const [button_state, set_button_state] = useState(true);
   const [search_query, set_search_query] = useState("Narendra Modi");
@@ -12,12 +12,12 @@ const Twitter_Account = () => {
   const get_twitter_accounts_data = async (e) => {
     e.preventDefault();
     const arr_of_accounts_obj = await axios.post(
-      "http://localhost:3001/people",
+      "http://localhost:3001/tweets",
       searchparams
     );
     console.log(arr_of_accounts_obj.data.data);
-    if (arr_of_accounts_obj.data.data.length > 6) {
-      let arr = arr_of_accounts_obj.data.data.slice(0, 6);
+    if (arr_of_accounts_obj.data.data.length > 4) {
+      let arr = arr_of_accounts_obj.data.data.slice(0, 4);
       set_accounts_data_arr(arr);
     } else {
       set_accounts_data_arr(arr_of_accounts_obj.data.data);
@@ -41,7 +41,7 @@ const Twitter_Account = () => {
             get_twitter_accounts_data(e);
           }}
         >
-          {button_state ? "Gather Accounts" : "Gathering Data"}
+          {button_state ? "Gather Tweets Data" : "Gathering Data"}
         </button>
       </form>
       <div>
@@ -58,16 +58,28 @@ const Twitter_Account = () => {
                   <span id="about">{item.id}</span>
                 </li>
                 <li>
-                  <label for="about">ID Link:</label>
-                  <span id="about">{item.id_link}</span>
+                  <label for="about">Tweet:</label>
+                  <span id="about">{item.tweet}</span>
                 </li>
                 <li>
-                  <label for="about">Profile Pic Link:</label>
-                  <span id="about">{item.profile_pic_link}</span>
+                  <label for="about">Profile Pic URL:</label>
+                  <span id="about">{item.profile_pic_url}</span>
                 </li>
                 <li>
-                  <label for="about">Description</label>
-                  <span id="about">{item.description}</span>
+                  <label for="about">Timing of Tweet:</label>
+                  <span id="about">{item.timing_of_tweet}</span>
+                </li>
+                <li>
+                  <label for="about">No of Likes:</label>
+                  <span id="about">{item.no_of_likes}</span>
+                </li>
+                <li>
+                  <label for="about">No of Retweets:</label>
+                  <span id="about">{item.no_of_retweets}</span>
+                </li>
+                <li>
+                  <label for="about">No of Replies:</label>
+                  <span id="about">{item.no_of_replys}</span>
                 </li>
               </div>
             );
@@ -77,4 +89,4 @@ const Twitter_Account = () => {
   );
 };
 
-export default Twitter_Account;
+export default Twitter_Tweets;

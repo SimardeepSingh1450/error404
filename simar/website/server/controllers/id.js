@@ -9,7 +9,7 @@ const id_fun = async (req, res) => {
   }
   res.send({
     message: "data has been uploaded",
-    id: resdata,
+    data: resdata,
   });
 };
 module.exports = id_fun;
