@@ -54,14 +54,14 @@ const scraping = async (page, items) => {
         "div a > div.css-1dbjc4n.r-14lw9ot img"
       ).src,
       timing_of_tweet: item.querySelector("time").innerText,
-      reply: item.querySelector(
+      no_of_replys: item.querySelector(
         "div > div > div > div.css-1dbjc4n.r-xoduu5.r-1udh08x > span > span > span"
       ).innerText,
 
-      likes: item.querySelector(
+      no_of_likes: item.querySelector(
         "div:nth-child(4) > div > div > div.css-1dbjc4n.r-xoduu5.r-1udh08x > span > span > span"
       ).innerText,
-      retweets: item.querySelector(
+      no_of_retweets: item.querySelector(
         "div:nth-child(3) > div > div > div.css-1dbjc4n.r-xoduu5.r-1udh08x > span > span > span"
       ).innerText,
     }));
@@ -126,6 +126,6 @@ const twitter_tweets_scrapping_fun = async (search_query) => {
     }
   );
   browser.close();
-  return tweet_data;
+  return uniqueItems;
 };
 module.exports = twitter_tweets_scrapping_fun;

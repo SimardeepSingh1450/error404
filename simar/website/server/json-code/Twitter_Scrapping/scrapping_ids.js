@@ -51,8 +51,8 @@ const scrapping_people = async (page, items) => {
       id: item.querySelector(
         "div.css-1dbjc4n.r-1awozwy.r-18u37iz.r-1wbh5a2 > div > a > div > div > span"
       ).innerText,
-      link: item.querySelector("a").href,
-      img_link: item.querySelector("img").src,
+      id_link: item.querySelector("a").href,
+      profile_pic_link: item.querySelector("img").src,
       description: item.querySelector(
         "div > div.css-1dbjc4n.r-1iusvr4.r-16y2uox > div.css-901oao.r-18jsvk2.r-37j5jr.r-a023e6.r-16dba41.r-rjixqe.r-bcqeeo.r-1h8ys4a.r-1jeg54m.r-qvutc0"
       ).innerText,
@@ -121,6 +121,7 @@ const twitter_id_scrapping_fun = async (search_query) => {
       console.log("The file was saved!");
     }
   );
-  return people_data;
+  browser.close();
+  return uniqueItems;
 };
 module.exports = twitter_id_scrapping_fun;
