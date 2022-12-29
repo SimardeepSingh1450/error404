@@ -62,7 +62,7 @@ def searchReddit(query):
 
 
 query = ' '.join(sys.argv[1:])
-# query="pewdiepie"
+# query="delhi"
 data = searchReddit(query)
 with open('./reddit.json', 'w') as f:
     json.dump(data,f,indent=4)
