@@ -1,4 +1,4 @@
-const twitter_twwet_scrapping_controller = require("./scrapping_tweets");
+const twitter_twwet_scrapping_controller = require("../json-code/Twitter_Scrapping/scrapping_tweets");
 const tweets_fun = async (req, res) => {
   const search_query = req.body.search_query;
 

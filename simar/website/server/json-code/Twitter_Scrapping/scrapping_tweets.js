@@ -114,13 +114,17 @@ const twitter_tweets_scrapping_fun = async (search_query) => {
   let uniqueItems = [...new Set(tweets)];
   const tweet_data = JSON.stringify(uniqueItems);
 
-  fs.writeFile("./data/tweets_data.json", tweet_data, function (err) {
-    if (err) {
-      return console.log(err);
-    }
+  fs.writeFile(
+    "./json-code/Twitter_Scrapping/data/tweets_data.json",
+    tweet_data,
+    function (err) {
+      if (err) {
+        return console.log(err);
+      }
 
-    console.log("The file was saved!");
-  });
+      console.log("The file was saved!");
+    }
+  );
   browser.close();
   return tweet_data;
 };

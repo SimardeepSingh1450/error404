@@ -1,4 +1,4 @@
-const twitter_id_scrapping_controller = require("./scrapping_ids");
+const twitter_id_scrapping_controller = require("../json-code/Twitter_Scrapping/scrapping_ids");
 const id_fun = async (req, res) => {
   const search_query = req.body.search_query;
   console.log(search_query);
