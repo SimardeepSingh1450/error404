@@ -24,7 +24,7 @@ import json
 def searchReddit(query):
     PATH = "./geckodriver"
     options = Options()
-    options.headless = True
+    # options.headless = True
     PATH_TO_DEV_NULL = '/dev/null'
     driver = webdriver.Firefox(executable_path=PATH, options=options, service_log_path=PATH_TO_DEV_NULL)
     query.replace(' ', "%20")
@@ -33,6 +33,7 @@ def searchReddit(query):
     # driver.implicitly_wait(5)
     try:
         temp = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.CLASS_NAME, '_2i5O0KNpb9tDq0bsNOZB_Q')))
+        tem2 = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.CLASS_NAME, '_3ryJoIoycVkA88fy40qNJc')))
     except:
         print("NOT found")
         driver.quit()
@@ -45,16 +46,18 @@ def searchReddit(query):
         
         currData = card.text.split('\n')
         
-        info['subreddit'] = currData[0]
-        info['user'] = currData[3]
+        info['subreddit'] = card.find_element(By.CLASS_NAME, '_3ryJoIoycVkA88fy40qNJc').text
+        info['user'] = card.find_element(By.CLASS_NAME, '_2tbHP6ZydRpjI44J3syuqC').text
         temp = card.find_element(By.CLASS_NAME, '_eYtD2XCVieq6emjKBH3m')
         info['title'] = temp.text
-        info['upvotes'] = currData[-3].replace('upvotes', ' ').strip()
-        info['comments'] = currData[-2].replace('comments', ' ').strip()
-        info['awards'] = currData[-1].replace('awards', ' ').strip()
+        smallData = card.find_elements(By.CLASS_NAME, '_vaFo96phV6L5Hltvwcox')
+        
+        info['upvotes'] = smallData[0].text.replace('upvotes', ' ').strip()
+        info['comments'] = smallData[1].text.replace('comments', ' ').strip()
+        info['awards'] = smallData[2].text.replace('awards', ' ').strip()
         data.append(info)
 
-    driver.quit()
+    # driver.quit()
     return data
 
 
