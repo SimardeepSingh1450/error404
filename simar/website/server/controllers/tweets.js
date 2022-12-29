@@ -7,9 +7,9 @@ const tweets_fun = async (req, res) => {
   if (resdata.length > 0) {
     twitter_tweetsModel.insertMany(resdata);
   }
-  res.send({
+  res.json({
     message: "data has been uploaded",
-    id: resdata,
+    data: resdata,
   });
 };
 module.exports = tweets_fun;
