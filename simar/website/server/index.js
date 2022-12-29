@@ -34,7 +34,8 @@ app.put("/update/:id", putFn);
 //DELETE Operation :
 app.delete("/delete/:id", deleteFn);
 
-app.use("/testing", require("./routes/sockpuppet_generator"));
+//sockpuppet scrapping operation
+app.use("/sockpuppet", require("./routes/sockpuppet_generator"));
 
 //twitter scrapping operations
 app.use("/tweets", require("./routes/top_tweet_scrap_route"));
