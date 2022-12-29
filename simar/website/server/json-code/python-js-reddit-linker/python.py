@@ -24,7 +24,7 @@ import json
 def searchReddit(query):
     PATH = "./geckodriver"
     options = Options()
-    # options.headless = True
+    options.headless = True
     PATH_TO_DEV_NULL = '/dev/null'
     driver = webdriver.Firefox(executable_path=PATH, options=options, service_log_path=PATH_TO_DEV_NULL)
     query.replace(' ', "%20")
@@ -57,12 +57,12 @@ def searchReddit(query):
         info['awards'] = smallData[2].text.replace('awards', ' ').strip()
         data.append(info)
 
-    # driver.quit()
+    driver.quit()
     return data
 
 
 query = ' '.join(sys.argv[1:])
-# query="pewdiepie"
+# query="delhi"
 data = searchReddit(query)
 with open('./reddit.json', 'w') as f:
     json.dump(data,f,indent=4)
