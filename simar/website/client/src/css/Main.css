@@ -109,3 +109,16 @@ section{
     font-size: 5vw;
     text-shadow: 3px 3px black;
 }
+
+
+.nine{
+    background-image: url('../assets/search.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nine h1{
+    font-family: lordofrings;
+    font-size: 5vw;
+    text-shadow: 3px 3px black;
+}

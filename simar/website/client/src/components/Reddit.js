@@ -31,7 +31,7 @@ const Reddit = () => {
   return (
     <div>
         <div>
-            <input onChange={(e)=>{setSearchField(e.target.value)}} className='redditInput' placeholder='Search Reddit'/>
+            <input onChange={(e)=>{setSearchField(e.target.value)}} className='redditInput' placeholder='Search Reddit...'/>
             <Button style={{backgroundColor:'red'}} onClick={() => {
           set_button_state(false);
           getRedditData();

@@ -8,6 +8,7 @@ import {motion} from 'framer-motion';
 import Features from "./Features";
 import Reddit from "./Reddit";
 import Sherlock from "./Sherlock";
+import SearchFeed from "./SearchFeed";
 
 //react-icons
 import {TbSock} from 'react-icons/tb'
@@ -16,6 +17,7 @@ import {BsTwitter} from 'react-icons/bs'
 import {BsReddit} from 'react-icons/bs'
 import {GiBroadsword} from 'react-icons/gi'
 import {GiSherlockHolmes} from 'react-icons/gi'
+import {BiSearchAlt} from 'react-icons/bi'
 
 const Main = () => {
   return (
@@ -52,6 +54,10 @@ const Main = () => {
       <section className="eight">
       <h1 style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Discovering User ID's<GiSherlockHolmes style={{borderRadius:'100px',marginLeft:'50px',fontSize:'6vw'}}/></h1>
       <Sherlock/>
+      </section>
+      <section className="nine">
+      <h1 style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Search Feed OSINT<BiSearchAlt style={{borderRadius:'100px',marginLeft:'50px',fontSize:'6vw'}}/></h1>
+      <SearchFeed/>
       </section>
     </div>
   );
