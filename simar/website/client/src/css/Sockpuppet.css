@@ -1,0 +1,45 @@
+.sockpuppetcardDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    border-style: solid;
+    width: 20vw;
+    font-size: 0.7vw;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.socksecond{
+    margin-left: 10px;
+    text-shadow: 1px 1px black;
+}
+
+.sockfirst{
+    animation: firstSockAnimation 3s infinite;
+    text-shadow: 1px 1px black;
+}
+
+@keyframes firstSockAnimation{
+    0%{
+        color:white;
+    }
+    50%{
+        color:aqua;
+    }
+    100%{
+        color:white;
+    }
+
+}
+
+.mainsockCardDiv{
+    /* border-style: solid; */
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin:20px;
+    justify-content: center;
+    text-align: center;
+}

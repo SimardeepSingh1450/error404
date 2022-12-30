@@ -1,6 +1,12 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
+//CSS
+import '../css/Sockpuppet.css'
+
+//Material UI Buttton
+import Button from '@mui/material/Button';
+
 
 const Sockpuppet = () => {
   const [sockpuppetdata, setsockpuppetdata] = useState();
@@ -13,118 +19,103 @@ const Sockpuppet = () => {
   };
 
   return (
-    <div className="App">
-      <button
-        onClick={() => {
+    <div className="sockpuppetMain">
+      <Button style={{backgroundColor:'orange'}} onClick={() => {
           set_button_state(false);
           getsockpuppetdata();
-        }}
-      >
+        }} variant="contained">
+  
         {button_state ? "Fetch Sock Puppet" : "Under fetching"}
-      </button>
+      
+      </Button>
       <div>
         {sockpuppetdata && (
-          <div>
-            <li>
-              <label for="about">Name:</label>
-              <span id="about">{sockpuppetdata.Name}</span>
-            </li>
-            <li>
-              <label for="about">First Name</label>
-              <span id="about">{sockpuppetdata.firstName}</span>
-            </li>
-            <li>
-              <label for="about">Last Name:</label>
-              <span id="about">{sockpuppetdata.lastName}</span>
-            </li>
-            <li>
-              <label for="about">Address:</label>
-              <span id="about">{sockpuppetdata.Address}</span>
-            </li>
-            <li>
-              <label for="about">Age:</label>
-              <span id="about">{sockpuppetdata.Age}</span>
-            </li>
-            <li>
-              <label for="about">User Name:</label>
-              <span id="about">{sockpuppetdata.Username}</span>
-            </li>
-            <li>
-              <label for="about">Email:</label>
-              <span id="about">{sockpuppetdata.Email}</span>
-            </li>
-            <li>
-              <label for="about">Password</label>
-              <span id="about">{sockpuppetdata.Password}</span>
-            </li>
-            <li>
-              <label for="about">Gmail:</label>
-              <span id="about">{sockpuppetdata.gmail}</span>
-            </li>
-            <li>
-              <label for="about">Gmail Pass:</label>
-              <span id="about">{sockpuppetdata.gmailPass}</span>
-            </li>
-            <li>
-              <label for="about">Phone Number</label>
-              <span id="about">{sockpuppetdata.PhoneNumber}</span>
-            </li>
-            <li>
-              <label for="about">Birthday:</label>
-              <span id="about">{sockpuppetdata.Birthday}</span>
-            </li>
-            <li>
-              <label for="about">Blood Type:</label>
-              <span id="about">{sockpuppetdata.BloodType}</span>
-            </li>
-            <li>
-              <label for="about">Browser Agent</label>
-              <span id="about">{sockpuppetdata.BrowserAgent}</span>
-            </li>
-            <li>
-              <label for="about">Debit Card No:</label>
-              <span id="about">{sockpuppetdata.DEBITCARD}</span>
-            </li>
-            <li>
-              <label for="about">CVV Number:</label>
-              <span id="about">{sockpuppetdata.CVV}</span>
-            </li>
-            <li>
-              <label for="about">Card Expiry Date:</label>
-              <span id="about">{sockpuppetdata.cardExpiry}</span>
-            </li>
-            <li>
-              <label for="about">GUID:</label>
-              <span id="about">{sockpuppetdata.GUID}</span>
-            </li>
-            <li>
-              <label for="about">SNN:</label>
-              <span id="about">{sockpuppetdata.SSN}</span>
-            </li>
-            <li>
-              <label for="about">Vehicle:</label>
-              <span id="about">{sockpuppetdata.Vehicle}</span>
-            </li>
-            <li>
-              <label for="about">Weight:</label>
-              <span id="about">{sockpuppetdata.Weight}</span>
-            </li>
-            <li>
-              <label for="about">Height:</label>
-              <span id="about">{sockpuppetdata.Height}</span>
-            </li>
-            <li>
-              <label for="about">Mother Maiden Name:</label>
-              <span id="about">{sockpuppetdata.MotherMaidenName}</span>
-            </li>
-            <li>
-              <label for="about">Zodiac Symbol:</label>
-              <span id="about">{sockpuppetdata.Zodiac}</span>
-            </li>
-            <li>
-              <label for="about">Geo Points:</label>
-              <span id="about">{sockpuppetdata.geoPoints}</span>
-            </li>
+          <div className="mainsockCardDiv">
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Name :</h4>
+              <h4 className="socksecond">{sockpuppetdata.Name}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Address :</h4>
+              <h4 className="socksecond">{sockpuppetdata.Address}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Age :</h4>
+              <h4 className="socksecond">{sockpuppetdata.Age}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Username :</h4>
+              <h4 className="socksecond">{sockpuppetdata.Username}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Email :</h4>
+              <h4 className="socksecond">{sockpuppetdata.Email}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Password :</h4>
+              <h4 className="socksecond">{sockpuppetdata.Password}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Phone Number :</h4>
+              <h4 className="socksecond">{sockpuppetdata.PhoneNumber}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Birthday :</h4>
+              <h4 className="socksecond">{sockpuppetdata.Birthday}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Blood Type :</h4>
+              <h4 className="socksecond">{sockpuppetdata.BloodType}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Browser Agent :</h4>
+              <h4 className="socksecond">{sockpuppetdata.BrowserAgent}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">DEBIT CARD :</h4>
+              <h4 className="socksecond">{sockpuppetdata.DEBITCARD}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">CVV Number :</h4>
+              <h4 className="socksecond">{sockpuppetdata.CVV}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Card Expiry :</h4>
+              <h4 className="socksecond">{sockpuppetdata.cardExpiry}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">GUID :</h4>
+              <h4 className="socksecond">{sockpuppetdata.GUID}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">SNN :</h4>
+              <h4 className="socksecond">{sockpuppetdata.SSN}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Vehicle :</h4>
+              <h4 className="socksecond">{sockpuppetdata.Vehicle}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Weight :</h4>
+              <h4 className="socksecond">{sockpuppetdata.Weight}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Height :</h4>
+              <h4 className="socksecond">{sockpuppetdata.Height}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Mother Maiden Name :</h4>
+              <h4 className="socksecond">{sockpuppetdata.MotherMaidenName}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Zodiac Sign :</h4>
+              <h4 className="socksecond">{sockpuppetdata.Zodiac}</h4>
+            </div>
+            <div className="sockpuppetcardDiv">
+              <h4 className="sockfirst">Geo Points :</h4>
+              <h4 className="socksecond">{sockpuppetdata.geoPoints}</h4>
+            </div>
+           
           </div>
         )}
       </div>

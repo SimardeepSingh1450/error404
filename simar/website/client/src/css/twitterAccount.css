@@ -1,0 +1,24 @@
+.twitteraccountCard{
+    display: flex;
+    flex-direction: column;
+    border-style: none;
+    margin: 5px;
+    font-size: 0.4vw;
+    width: 45vw;
+    background-color: black;
+    color: white;
+}
+
+.twitterAccountMain{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.twitterAccountInput{
+    height: 25px;
+    margin: 5px;
+    width: 300px;
+}

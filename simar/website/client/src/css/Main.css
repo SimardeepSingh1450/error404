@@ -3,6 +3,7 @@ section{
     display:flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color:white;
     scroll-snap-align: start;
     flex-direction: column;
@@ -14,20 +15,68 @@ section{
     height: 100vh;
 }
 
+@font-face {
+    font-family: lordofrings;
+    src: url('../fontfamily/RingbearerMedium-51mgZ.ttf');
+}
+
 .one{
-    background: green;
-   
+    font-size: 5vw;
+    background-image: url('../assets/background2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: lordofrings;
+    text-shadow: 3px 3px black;
+    color: white;
 }
 
 .two{
-    background: red;
-    
+    background-image: url('../assets//powers.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: lordofrings;
+    font-size: 3vw;
+}
+
+.two h1{
+    text-shadow: 3px 3px black;
 }
 
 .third{
-    background: blue;
+    background-image: url('../assets/saurontower.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.third h1{
+    font-family: lordofrings;
+    font-size: 5vw;
+    text-shadow: 3px 3px black;
+
 }
 
 .four{
-    background:lightsalmon;
+    background-image: url('../assets/googlemap.jpg');
+}
+
+.four h1{
+    font-family: lordofrings;
+    font-size: 5vw;
+    text-shadow: 3px 3px black;
+}
+
+.five{
+    background-image: url('../assets/gatheraccount.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.five h1{
+    font-family: lordofrings;
+    font-size: 5vw;
+    text-shadow: 3px 3px black;
+}
+
+.six{
+    background-image: url('../assets/twitterback2.jpg');
 }

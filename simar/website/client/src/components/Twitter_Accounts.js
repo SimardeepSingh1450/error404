@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
+//CSS
+import '../css/twitterAccount.css'
+//Material UI Buttton
+import Button from '@mui/material/Button';
 
 const Twitter_Account = () => {
   const [accounts_data_arr, set_accounts_data_arr] = useState();
@@ -29,46 +33,35 @@ const Twitter_Account = () => {
   return (
     <div className="App">
       <form>
-        <input
+        <input className="twitterAccountInput"
           placeholder="Enter Search filed"
           onChange={(e) => {
             set_search_query(e.target.value);
           }}
         />
-        <button
-          onClick={(e) => {
+        <Button  onClick={(e) => {
             set_button_state(false);
             get_twitter_accounts_data(e);
-          }}
-        >
-          {button_state ? "Gather Accounts" : "Gathering Data"}
-        </button>
+          }} variant="contained">
+  
+  {button_state ? "Gather Accounts" : "Gathering Data"}
+      
+      </Button>
+     
       </form>
-      <div>
+      <div className="twitterAccountMain">
         {accounts_data_arr &&
           accounts_data_arr.map((item) => {
             return (
               <div>
-                <li>
-                  <label for="about">Name:</label>
-                  <span id="about">{item.name}</span>
-                </li>
-                <li>
-                  <label for="about">ID:</label>
-                  <span id="about">{item.id}</span>
-                </li>
-                <li>
-                  <label for="about">ID Link:</label>
-                  <span id="about">{item.id_link}</span>
-                </li>
-                <li>
-                  <label for="about">Profile Pic Link:</label>
-                  <span id="about">{item.profile_pic_link}</span>
-                </li>
-                <li>
-                  <label for="about">Description</label>
-                  <span id="about">{item.description}</span>
-                </li>
+                <div className="twitteraccountCard">
+                  <h3>Description : {item.description}</h3>
+                  <h3>ID : {item.id}</h3>
+                  <h3>ID Link : {item.id_link}</h3>
+                  <h3>Name : {item.name}</h3>
+                  <h3>Profile Pic Link : {item.profile_pic_link}</h3>
+                </div>
+
               </div>
             );
           })}
