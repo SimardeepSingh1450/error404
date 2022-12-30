@@ -42,6 +42,7 @@ section{
     text-shadow: 3px 3px black;
 }
 
+
 .third{
     background-image: url('../assets/saurontower.jpg');
     background-size: cover;
@@ -97,3 +98,14 @@ section{
     text-shadow: 3px 3px black;
 }
 
+.eight{
+    background-image: url('../assets/discovering.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.eight h1{
+    font-family: lordofrings;
+    font-size: 5vw;
+    text-shadow: 3px 3px black;
+}

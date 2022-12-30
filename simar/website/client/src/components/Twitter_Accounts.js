@@ -44,7 +44,7 @@ const Twitter_Account = () => {
             get_twitter_accounts_data(e);
           }} variant="contained">
   
-  {button_state ? "Gather Accounts" : "Gathering Data"}
+  {button_state ? "Gather Accounts" : "Gathering Data..."}
       
       </Button>
      

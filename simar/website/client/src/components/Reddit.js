@@ -37,7 +37,7 @@ const Reddit = () => {
           getRedditData();
         }} variant="contained">
   
-        {button_state ? "Fetch Reddit Data" : "Under fetching"}
+        {button_state ? "Fetch Reddit Data" : "Under fetching..."}
       
       </Button>
       <div className='mainredditCardDiv'>

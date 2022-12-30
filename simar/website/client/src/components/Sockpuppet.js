@@ -28,7 +28,7 @@ const Sockpuppet = () => {
           getsockpuppetdata();
         }} variant="contained">
   
-        {button_state ? "Fetch Sock Puppet" : "Under fetching"}
+        {button_state ? "Generate Sock Puppet" : "Under fetching..."}
       
       </Button>
       <div>
