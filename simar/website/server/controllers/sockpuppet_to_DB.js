@@ -6,6 +6,7 @@ const redit_saved_to_DB = async (req, res) => {
   if (redit_data) {
     redditModel.insertMany(redit_data);
   }
+
   res.json({
     message: "data of sockpuppet credentials has been uploaded to DB",
   });

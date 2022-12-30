@@ -75,6 +75,9 @@ app.get(
   require("./controllers/DB data fetching/twitter_tweets_DB")
 );
 
+//testing repote generation
+app.get("/testing", require("./testing/repote"));
+
 //duckduckGo Operations
 const { runPythonDuck } = require("./json-code/duckduckgo-linker/index");
 app.get("/run-duck-python-scrape/:searchField", runPythonDuck);
