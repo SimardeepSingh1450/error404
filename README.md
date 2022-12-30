@@ -42,3 +42,28 @@
 #### 4. Google Maps API
 
 
+### How to run this in your local Environment :
+
+#### Setup on Local Environment :
+
+#### 1. In server Directory
+```
+npm install
+```
+
+#### 2. In client Directory
+```
+npm install
+```
+
+#### To run the Application :
+#### 1. In Client Directory
+##### To run the frontend of the Application 
+```
+npm start
+```
+#### 2. In Server Directory
+##### To start the Backend Server on Local Environment
+```
+node index.js
+```
