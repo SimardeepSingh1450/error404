@@ -109,15 +109,8 @@ section{
     font-size: 5vw;
     text-shadow: 3px 3px black;
 }
-<<<<<<< Updated upstream
-
-
-.nine{
-    background-image: url('../assets/search.jpg');
-=======
 .nine{
     background-image: url('../assets/backgroundfront.jpg');
->>>>>>> Stashed changes
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -127,18 +120,3 @@ section{
     font-size: 5vw;
     text-shadow: 3px 3px black;
 }
-<<<<<<< Updated upstream
-
-.ten{
-    background-image: url('../assets/search2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.ten h1{
-    font-family: lordofrings;
-    font-size: 5vw;
-    text-shadow: 3px 3px black;
-}
-=======
->>>>>>> Stashed changes

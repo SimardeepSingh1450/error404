@@ -8,22 +8,9 @@ import { motion } from "framer-motion";
 import Features from "./Features";
 import Reddit from "./Reddit";
 import Sherlock from "./Sherlock";
-<<<<<<< Updated upstream
-import SearchFeed from "./GoogleSearchFeed";
-import DuckSearchFeed from "./DuckSearchFeed";
-
-//react-icons
-import {TbSock} from 'react-icons/tb'
-import {ImLocation} from 'react-icons/im'
-import {BsTwitter} from 'react-icons/bs'
-import {BsReddit} from 'react-icons/bs'
-import {GiBroadsword} from 'react-icons/gi'
-import {GiSherlockHolmes} from 'react-icons/gi'
-import {BsGoogle} from 'react-icons/bs'
-import {SiDuckduckgo} from 'react-icons/si'
-
-=======
 import Excellcreation from "./Excellcreation";
+import SearchFeed from './GoogleSearchFeed'
+import DuckSearchFeed from './DuckSearchFeed'
 
 //react-icons
 import { TbSock } from "react-icons/tb";
@@ -32,7 +19,8 @@ import { BsTwitter } from "react-icons/bs";
 import { BsReddit } from "react-icons/bs";
 import { GiBroadsword } from "react-icons/gi";
 import { GiSherlockHolmes } from "react-icons/gi";
->>>>>>> Stashed changes
+import { BsGoogle } from "react-icons/bs";
+import {SiDuckduckgo} from 'react-icons/si'
 
 const Main = () => {
   return (
