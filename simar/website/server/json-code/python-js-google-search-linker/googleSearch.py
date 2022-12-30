@@ -31,7 +31,7 @@ l = len(results)
 li = []
 lit=[]
 
-c ='googleSearch.json'
+c ='_'.join(sys.argv[1:])
 
 def findDomain(URL):
     domain = urlparse(URL).netloc
