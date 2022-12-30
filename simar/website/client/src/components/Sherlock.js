@@ -19,7 +19,7 @@ const Sherlock = () => {
       `http://localhost:3001/python-sherlock/${userInput}`
     );
     console.log("From Backend Response :", runPython);
-    await delay(20000);
+    await delay(50000);
     const sherlockJson = await axios.get(
       "http://localhost:3001/fetch-sherlock-json"
     );

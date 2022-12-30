@@ -2,6 +2,9 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { CSVLink } from "react-csv";
+
+import '../css/Excel.css'
+
 const Excellcreation = () => {
   const [visible, setvisible] = useState(false);
   const [data1, setData1] = useState([]);
@@ -25,7 +28,7 @@ const Excellcreation = () => {
   return (
     <div className="sockpuppetMain">
       <button
-        style={{ backgroundColor: "orange" }}
+        className="excelButton"
         onClick={() => {
           createexcell();
         }}
@@ -35,22 +38,22 @@ const Excellcreation = () => {
       </button>
       {visible && (
         <div className="reportCardCSV">
-          <CSVLink data={data1} onClick={() => {}}>
+          <CSVLink className="linksexcel" data={data1} onClick={() => {}}>
             DuckDuckGo Data
           </CSVLink>
-          <CSVLink data={data2} onClick={() => {}}>
+          <CSVLink className="linksexcel" data={data2} onClick={() => {}}>
             Sock Puppet
           </CSVLink>
-          <CSVLink data={data3} onClick={() => {}}>
+          <CSVLink className="linksexcel" data={data3} onClick={() => {}}>
             Google Search
           </CSVLink>
-          <CSVLink data={data4} onClick={() => {}}>
+          <CSVLink className="linksexcel" data={data4} onClick={() => {}}>
             Redit
           </CSVLink>
-          <CSVLink data={data5} onClick={() => {}}>
+          <CSVLink className="linksexcel" data={data5} onClick={() => {}}>
             Twitter Accounts
           </CSVLink>
-          <CSVLink data={data6} onClick={() => {}}>
+          <CSVLink className="linksexcel" data={data6} onClick={() => {}}>
             Twiiter Tweets
           </CSVLink>
         </div>

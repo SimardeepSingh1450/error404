@@ -19,10 +19,12 @@ const DuckSearchFeed = () => {
     const duckduckGo=await axios.get(`http://localhost:3001/run-duck-python-scrape/${userInput}`)
     console.log(duckduckGo);
     //delay
-    await delay(10000);
+    await delay(20000);
     const duckduckGoJson=await axios.get('http://localhost:3001/get-duck-data')
     console.log('DUCK DUCK DATA :',duckduckGoJson);
-    setDuckArray(duckduckGoJson.data);
+    const duckArray=duckduckGoJson.data;
+    const slicedDuck=duckArray.slice(-6);
+    setDuckArray(slicedDuck);
      set_button_state(true);
 
     }

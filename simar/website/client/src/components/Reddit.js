@@ -19,13 +19,14 @@ const Reddit = () => {
   const getRedditData=async()=>{
     let redditPythonCode=await axios.get(`http://localhost:3001/run-reddit-python-scrape/${searchField}`);
     console.log('Ran Python Code',redditPythonCode);
-    await delay(10000);
-    let data=await axios.get('http://localhost:3001/save_reditcontent');
-    console.log('Saved Reddit to DB',data);
-    await delay(20000);
-    let jsonfromDB=await axios.get('http://localhost:3001/fetch_redit')
-    console.log('Fetch',jsonfromDB);
-    let arrayJsonfromDB=jsonfromDB.data.data;
+    await delay(40000);
+    // let data=await axios.get('http://localhost:3001/save_reditcontent');
+    // console.log('Saved Reddit to DB',data);
+    // await delay(20000);
+    // let jsonfromDB=await axios.get('http://localhost:3001/fetch_redit')
+    // console.log('Fetch',jsonfromDB);
+    const jsonfromBackEnd=await axios.get('http://localhost:3001/get-reddit-data')
+    let arrayJsonfromDB=jsonfromBackEnd.data;
     let slicedArray=arrayJsonfromDB.slice(-5);
     console.log(slicedArray);
     setReditJson(slicedArray);

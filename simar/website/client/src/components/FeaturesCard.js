@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import {HashLink as Link} from 'react-router-hash-link';
 
 //Images
 import SockImage from '../assets/sockpuppet.jpg'
@@ -34,13 +35,13 @@ export default function MediaCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Go to Sock Puppet Generator</Button>
+        <Link smooth to="#third"><Button size="small">Go to Sock Puppet Generator</Button></Link>
       </CardActions>
     </Card>
 
 <Card sx={{ maxWidth: 340 }} style={{margin:'15px',width:200,backgroundColor:'white',borderRadius:'20px'}}>
 <CardMedia
-  sx={{ height: 130,backgroundSize:'80px'}}
+  sx={{ height: 110,backgroundSize:'80px'}}
   image={MapsImage}
   title="Maps"
 />
@@ -53,14 +54,14 @@ export default function MediaCard() {
   </Typography>
 </CardContent>
 <CardActions>
-  <Button size="small">Go to GeoMaps</Button>
+<Link smooth to="#four"><Button size="small">Go to GeoMaps</Button></Link>
 </CardActions>
 </Card>
 
 
 <Card sx={{ maxWidth: 340 }} style={{margin:'15px',width:200,backgroundColor:'white',borderRadius:'20px'}}>
 <CardMedia
-  sx={{ height: 130,backgroundSize:'80px'}}
+  sx={{ height: 110,backgroundSize:'80px'}}
   image={UserIdImage}
   title="UserID"
 />
@@ -73,7 +74,7 @@ export default function MediaCard() {
   </Typography>
 </CardContent>
 <CardActions>
-  <Button size="small">Go to Fetch UserID</Button>
+<Link smooth to="#eight"><Button size="small">Go to Fetch UserID</Button></Link>
 </CardActions>
 </Card>
 
@@ -92,7 +93,7 @@ export default function MediaCard() {
   </Typography>
 </CardContent>
 <CardActions>
-  <Button size="small">Go to Fetch Search Feed</Button>
+<Link smooth to="#nine"><Button size="small">Go to Fetch Search Feed</Button></Link>
 </CardActions>
 </Card>
 
@@ -111,7 +112,7 @@ export default function MediaCard() {
   </Typography>
 </CardContent>
 <CardActions>
-  <Button size="small">Go to Social Media Fetching</Button>
+<Link smooth to="#five"><Button size="small">Go to Social Media Fetching</Button></Link>
 </CardActions>
 </Card>
 

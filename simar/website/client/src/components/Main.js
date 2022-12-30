@@ -12,6 +12,7 @@ import Excellcreation from "./Excellcreation";
 import SearchFeed from './GoogleSearchFeed'
 import DuckSearchFeed from './DuckSearchFeed'
 
+// import {Link} from 'react-router-hash-link'
 //react-icons
 import { TbSock } from "react-icons/tb";
 import { ImLocation } from "react-icons/im";
@@ -48,7 +49,7 @@ const Main = () => {
         {/* <h1>Powers of Eye Of Sauron</h1> */}
         <Features />
       </section>
-      <section className="third">
+      <section id="third" className="third">
         <h1
           style={{
             display: "flex",
@@ -60,7 +61,7 @@ const Main = () => {
         </h1>
         <Sockpuppet />
       </section>
-      <section className="four">
+      <section id="four" className="four">
         <h1
           style={{
             display: "flex",
@@ -72,7 +73,7 @@ const Main = () => {
         </h1>
         <Maps />
       </section>
-      <section className="five">
+      <section id="five" className="five">
         <h1
           style={{
             display: "flex",
@@ -111,7 +112,7 @@ const Main = () => {
         </h1>
         <Reddit />
       </section>
-      <section className="eight">
+      <section id="eight" className="eight">
         <h1
           style={{
             display: "flex",
@@ -131,7 +132,7 @@ const Main = () => {
         <Sherlock />
       </section>
       
-      <section className="nine">
+      <section id="nine" className="nine">
       <h1 style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Google Search Feed <BsGoogle style={{borderRadius:'100px',marginLeft:'50px',fontSize:'6vw'}}/></h1>
       <SearchFeed/>
       </section>
@@ -144,11 +145,12 @@ const Main = () => {
           style={{
             display: "flex",
             justifyContent: "center",
+            flexDirection:'column',
             alignItems: "center",
           }}
         >
           Report
-          <Excellcreation style={{ marginLeft: "50px" }} />
+          <Excellcreation  style={{ marginLeft: "50px" }} />
         </h1>
       </section>
     </div>

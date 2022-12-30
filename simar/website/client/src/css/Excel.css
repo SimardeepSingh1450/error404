@@ -1,0 +1,29 @@
+.excelButton{
+    border-style: solid;
+    width: 300px;
+    height: 40px;
+    font-size: 1vw;
+    justify-content: center;
+    border-radius: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.excelButton:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px black;
+}
+
+.reportCardCSV{
+    display: flex;
+    flex-direction: column;
+}
+
+.linksexcel{
+    font-size: 2vw;
+    color: white;
+    margin: 10px;
+}
+
+a:visited{
+    color: white;
+}
