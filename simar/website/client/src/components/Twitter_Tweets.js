@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
+//Material UI Buttton
+import Button from '@mui/material/Button';
+//CSS
+import '../css/twitterTweets.css'
 
 const Twitter_Tweets = () => {
   const [accounts_data_arr, set_accounts_data_arr] = useState();
@@ -29,20 +33,21 @@ const Twitter_Tweets = () => {
   return (
     <div className="App">
       <form>
-        <input
+        <input className='twitterTweetsInput'
           placeholder="Enter Search filed"
           onChange={(e) => {
             set_search_query(e.target.value);
           }}
         />
-        <button
-          onClick={(e) => {
+         <Button style={{background:'red'}} onClick={(e) => {
             set_button_state(false);
             get_twitter_accounts_data(e);
-          }}
-        >
-          {button_state ? "Gather Tweets Data" : "Gathering Data"}
-        </button>
+          }} variant="contained">
+  
+  {button_state ? "Gather Tweets Data" : "Gathering Data"}
+      
+      </Button>
+       
       </form>
       <div>
         {accounts_data_arr &&

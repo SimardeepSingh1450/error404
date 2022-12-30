@@ -39,7 +39,7 @@ const Twitter_Account = () => {
             set_search_query(e.target.value);
           }}
         />
-        <Button  onClick={(e) => {
+        <Button style={{borderRadius:'0'}} onClick={(e) => {
             set_button_state(false);
             get_twitter_accounts_data(e);
           }} variant="contained">
@@ -55,6 +55,7 @@ const Twitter_Account = () => {
             return (
               <div>
                 <div className="twitteraccountCard">
+                  <img style={{width:'50px'}} alt="twitter-profile-pic-link" src={item.profile_pic_link}/>
                   <h3>Description : {item.description}</h3>
                   <h3>ID : {item.id}</h3>
                   <h3>ID Link : {item.id_link}</h3>

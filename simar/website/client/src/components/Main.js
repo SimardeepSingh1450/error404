@@ -23,7 +23,7 @@ const Main = () => {
         <Sockpuppet />
       </section>
       <section className="four">
-      <h1>Google Maps</h1>
+      <h1>Geolocation OSINT</h1>
         <Maps />
         
       </section>

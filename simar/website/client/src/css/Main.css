@@ -80,3 +80,9 @@ section{
 .six{
     background-image: url('../assets/twitterback2.jpg');
 }
+
+.six h1{
+    font-family: lordofrings;
+    font-size: 5vw;
+    text-shadow: 3px 3px black;
+}

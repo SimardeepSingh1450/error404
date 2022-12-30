@@ -4,9 +4,13 @@
     border-style: none;
     margin: 5px;
     font-size: 0.4vw;
-    width: 45vw;
-    background-color: black;
-    color: white;
+    width: 20vw;
+    background-color: white;
+    color: black;
+    align-items: center;
+    padding:10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px black;
 }
 
 .twitterAccountMain{
@@ -18,7 +22,6 @@
 }
 
 .twitterAccountInput{
-    height: 25px;
-    margin: 5px;
+    height: 30px;
     width: 300px;
 }
