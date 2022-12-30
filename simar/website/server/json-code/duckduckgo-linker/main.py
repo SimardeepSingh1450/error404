@@ -54,9 +54,8 @@ def searchNews(query):
 
 query = ' '.join(sys.argv[1:])
 # query="duckirony"
-query1 = '_'.join(sys.argv[1:])
 output = searchNews(query)
-with open(f'{query1}.json', 'w') as f:
+with open('duck.json', 'w') as f:
     json.dump(output,f,indent=4)
 
     
