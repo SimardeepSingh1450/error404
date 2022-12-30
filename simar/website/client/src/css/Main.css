@@ -122,3 +122,15 @@ section{
     font-size: 5vw;
     text-shadow: 3px 3px black;
 }
+
+.ten{
+    background-image: url('../assets/search2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ten h1{
+    font-family: lordofrings;
+    font-size: 5vw;
+    text-shadow: 3px 3px black;
+}

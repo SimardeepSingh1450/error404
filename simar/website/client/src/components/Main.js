@@ -8,7 +8,8 @@ import {motion} from 'framer-motion';
 import Features from "./Features";
 import Reddit from "./Reddit";
 import Sherlock from "./Sherlock";
-import SearchFeed from "./SearchFeed";
+import SearchFeed from "./GoogleSearchFeed";
+import DuckSearchFeed from "./DuckSearchFeed";
 
 //react-icons
 import {TbSock} from 'react-icons/tb'
@@ -17,7 +18,9 @@ import {BsTwitter} from 'react-icons/bs'
 import {BsReddit} from 'react-icons/bs'
 import {GiBroadsword} from 'react-icons/gi'
 import {GiSherlockHolmes} from 'react-icons/gi'
-import {BiSearchAlt} from 'react-icons/bi'
+import {BsGoogle} from 'react-icons/bs'
+import {SiDuckduckgo} from 'react-icons/si'
+
 
 const Main = () => {
   return (
@@ -56,8 +59,12 @@ const Main = () => {
       <Sherlock/>
       </section>
       <section className="nine">
-      <h1 style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Search Feed OSINT<BiSearchAlt style={{borderRadius:'100px',marginLeft:'50px',fontSize:'6vw'}}/></h1>
+      <h1 style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Google Search Feed <BsGoogle style={{borderRadius:'100px',marginLeft:'50px',fontSize:'6vw'}}/></h1>
       <SearchFeed/>
+      </section>
+      <section className="ten">
+      <h1 style={{display:'flex',justifyContent:'center',alignItems:'center'}}>DuckDuckGo Search Feed <SiDuckduckgo style={{borderRadius:'100px',marginLeft:'50px',fontSize:'6vw'}}/></h1>
+      <DuckSearchFeed/>
       </section>
     </div>
   );

@@ -4,14 +4,73 @@
 }
 
 .searchfeedLeft{
-    border-style: solid;
+    /* border-style: solid; */
 }
 
 .searchfeedRight{
-    border-style: solid;
+    /* border-style: solid; */
 }
 
 .searchfeedInput{
     width: 300px;
     height: 30px;
+}
+
+.googleCardDiv{
+    font-size: 0.5vw;
+    border-style: solid;
+    width: 25vw;
+
+       /* From https://css.glass */
+background: rgba(255, 255, 255, 0);
+border-radius: 5px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.5px);
+-webkit-backdrop-filter: blur(4.5px);
+border: 1px solid rgba(255, 255, 255, 1);
+margin: 5px;
+text-shadow: 1px 1px black;
+}
+
+.spanGoogle{
+    animation:google 3s infinite;
+}
+
+@keyframes google{
+    0%{
+        color:white;
+    }
+    50%{
+        color:red;
+    }
+    100%{
+        color:white;
+    }
+}
+
+.spanDuck{
+    animation:duck 3s infinite;
+}
+
+@keyframes duck{
+    0%{
+        color:white;
+    }
+    50%{
+        color:yellow;
+    }
+    100%{
+        color:white;
+    }
+}
+
+.maingoogleCardDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+}
+
+.duckImage{
+    width: 10vw;
 }
