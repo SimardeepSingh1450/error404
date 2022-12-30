@@ -17,12 +17,14 @@ const Reddit = () => {
   );
   
   const getRedditData=async()=>{
-    const redditPythonCode=await axios.get(`http://localhost:3001/run-reddit-python-scrape/${searchField}`);
+    let redditPythonCode=await axios.get(`http://localhost:3001/run-reddit-python-scrape/${searchField}`);
     console.log(redditPythonCode);
-    await delay(30000);
-    const fetchredditJson=await axios.get('http://localhost:3001/get-reddit-data');
-    setReditJson(fetchredditJson);
-    console.log(redditJson);
+    await delay(20000);
+    let fetchredditJson=await axios.get('http://localhost:3001/get-reddit-data');
+    let slicedArray=fetchredditJson.data.slice(0,7); 
+    // console.log(slicedArray);
+    setReditJson(slicedArray);
+    // console.log(redditJson);
     set_button_state(true);
   }
 
@@ -38,12 +40,18 @@ const Reddit = () => {
         {button_state ? "Fetch Reddit Data" : "Under fetching"}
       
       </Button>
-      <div>
-        {/* {redditJson && redditJson.map((item)=>(
+      <div className='mainredditCardDiv'>
+        {redditJson ? redditJson.map((item)=>{
+            return(
             <div className='redditDataCard'>
-                <h3>Subreddit : {item[0].subreddit}</h3>
-            </div>
-        ))} */}
+                <h3>Subreddit : {item.subreddit}</h3>
+                <h3>User : {item.user}</h3>
+                <h3>Title : {item.title}</h3>
+                <h3>Upvotes : {item.subreddit}</h3>
+                <h3>Comments : {item.subreddit}</h3>
+
+            </div>)
+}):<></>}
       </div>
         </div>
     </div>

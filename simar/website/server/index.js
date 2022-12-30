@@ -76,7 +76,7 @@ const {
 app.get("/run-reddit-python-scrape/:searchField", runRedditPythonCode);
 
 const { getRedditJson } = require("./json-code/python-js-reddit-linker/index");
-app.get("/get-reddit-data",getRedditJson);
+app.get("/get-reddit-data", getRedditJson);
 
 //sherlock Operations
 const {
