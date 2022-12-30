@@ -50,6 +50,7 @@ app.get("/save_twitter_tweets", require("./controllers/twitter_tweets_to_DB"));
 app.get("/save_reditcontent", require("./controllers/redit_to_DB"));
 app.get("/save_duckduckgo", require("./controllers/duckduck_go_to_DB"));
 app.get("/save_sockpuppet", require("./controllers/sockpuppet_to_DB"));
+app.get("/save_sherlock", require("./controllers/sherlock_json_to_DB"));
 
 //duckduckGo Operations
 const { runPythonDuck } = require("./json-code/duckduckgo-linker/index");

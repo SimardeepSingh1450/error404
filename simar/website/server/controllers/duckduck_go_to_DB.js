@@ -6,8 +6,8 @@ const redit_saved_to_DB = async (req, res) => {
   if (duckduck_go_data) {
     duck_duckModel.insertMany(duckduck_go_data);
   }
-  res.send({
-    message: "data of redit has been uploaded to DB",
+  res.json({
+    message: "data of duckduckgo search has been uploaded to DB",
   });
 };
 module.exports = redit_saved_to_DB;

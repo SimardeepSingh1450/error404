@@ -6,7 +6,7 @@ const redit_saved_to_DB = async (req, res) => {
   if (redit_data) {
     redditModel.insertMany(redit_data);
   }
-  res.send({
+  res.json({
     message: "data of redit has been uploaded to DB",
   });
 };

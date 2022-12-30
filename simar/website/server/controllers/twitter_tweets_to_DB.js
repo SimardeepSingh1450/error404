@@ -6,7 +6,7 @@ const tweets_saved_to_DB = async (req, res) => {
   if (accounts_data) {
     twitter_tweetsModel.insertMany(accounts_data);
   }
-  res.send({
+  res.json({
     message: "data of twitter accounts has been uploaded to DB",
   });
 };
