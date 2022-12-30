@@ -86,3 +86,14 @@ section{
     font-size: 5vw;
     text-shadow: 3px 3px black;
 }
+
+.seven{
+    background-image: url('../assets/redditback.jpg');
+}
+
+.seven h1{
+    font-family: lordofrings;
+    font-size: 5vw;
+    text-shadow: 3px 3px black;
+}
+

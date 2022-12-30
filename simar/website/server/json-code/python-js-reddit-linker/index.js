@@ -1,5 +1,4 @@
 const {spawn}=require('child_process');
-let redditJson;
 
 let searchQueryInReddit="Simar";
 
@@ -19,7 +18,7 @@ const runRedditPythonCode=async(req,res)=>{
 
 
 const getRedditJson=async(req,res)=>{
-    redditJson=require('../../reddit.json');
+    let redditJson=require('../../reddit.json');
     res.json(redditJson);
 }
 
