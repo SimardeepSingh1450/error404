@@ -101,7 +101,7 @@ const scrape_ids = async (page, itemTargetCount) => {
 };
 const twitter_id_scrapping_fun = async (search_query) => {
   // const search_query = req.body.search_query;
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({ headless: true });
   const pg = await browser.newPage();
   await pg.goto("https://twitter.com/i/flow/login", {
     waitUntil: "networkidle0",
