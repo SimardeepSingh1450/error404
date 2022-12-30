@@ -63,6 +63,7 @@ def searchReddit(query):
 
 query = ' '.join(sys.argv[1:])
 # query="lahore"
+query1 = '_'.join(sys.argv[1:])
 data = searchReddit(query)
-with open('./reddit.json', 'w') as f:
+with open(f'./{query1}.json', 'w') as f:
     json.dump(data,f,indent=4)
