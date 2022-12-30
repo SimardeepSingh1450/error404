@@ -130,7 +130,16 @@ const Main = () => {
         </h1>
         <Sherlock />
       </section>
+      
       <section className="nine">
+      <h1 style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Google Search Feed <BsGoogle style={{borderRadius:'100px',marginLeft:'50px',fontSize:'6vw'}}/></h1>
+      <SearchFeed/>
+      </section>
+      <section className="ten">
+      <h1 style={{display:'flex',justifyContent:'center',alignItems:'center'}}>DuckDuckGo Search Feed <SiDuckduckgo style={{borderRadius:'100px',marginLeft:'50px',fontSize:'6vw'}}/></h1>
+      <DuckSearchFeed/>
+      </section>
+      <section className="eleven">
         <h1
           style={{
             display: "flex",
@@ -141,14 +150,6 @@ const Main = () => {
           Report
           <Excellcreation style={{ marginLeft: "50px" }} />
         </h1>
-      </section>
-      <section className="nine">
-      <h1 style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Google Search Feed <BsGoogle style={{borderRadius:'100px',marginLeft:'50px',fontSize:'6vw'}}/></h1>
-      <SearchFeed/>
-      </section>
-      <section className="ten">
-      <h1 style={{display:'flex',justifyContent:'center',alignItems:'center'}}>DuckDuckGo Search Feed <SiDuckduckgo style={{borderRadius:'100px',marginLeft:'50px',fontSize:'6vw'}}/></h1>
-      <DuckSearchFeed/>
       </section>
     </div>
   );
