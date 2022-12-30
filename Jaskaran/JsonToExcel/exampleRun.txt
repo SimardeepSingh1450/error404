@@ -1,0 +1,13 @@
+python3 main.py d duck.json g googleSearch.json r reddit.json s sherlock.json td tweets_data.json ti id_data.json
+python3 main.py p finalOutput.xlsx d duck.json g googleSearch.json r reddit.json s sherlock.json td tweets_data.json ti id_data.json
+python3 main.py r reddit.json g googleSearch.json
+python3 main.py p onlyduck.xlsx d duck.json
+
+
+p - path of final xlsx file
+d - path of json file of duckduckgo (including the file)
+g - google json
+r - reddit json
+s - sherlock json
+td - tweets_data json
+ti - id_data json
