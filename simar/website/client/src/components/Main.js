@@ -28,7 +28,7 @@ const Main = () => {
         <Sockpuppet />
       </section>
       <section className="four">
-      <h1 style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Geolocation OSINT <ImLocation style={{marginLeft:'50px'}}/></h1>
+      <h1 style={{display:'flex',justifyContent:'center',alignItems:'center'}}>Geo OSINT <ImLocation style={{marginLeft:'50px'}}/></h1>
         <Maps />
         
       </section>

@@ -44,11 +44,11 @@ const Reddit = () => {
         {redditJson ? redditJson.map((item)=>{
             return(
             <div className='redditDataCard'>
-                <h3>Subreddit : {item.subreddit}</h3>
-                <h3>User : {item.user}</h3>
-                <h3>Title : {item.title}</h3>
-                <h3>Upvotes : {item.subreddit}</h3>
-                <h3>Comments : {item.subreddit}</h3>
+                <h3><span className='span-reddit'>Subreddit :</span> {item.subreddit}</h3>
+                <h3><span className='span-reddit'>User :</span> {item.user}</h3>
+                <h3><span className='span-reddit'>Title :</span> {item.title}</h3>
+                <h3><span className='span-reddit'>Upvotes :</span> {item.subreddit}</h3>
+                <h3><span className='span-reddit'>Comments :</span>  {item.subreddit}</h3>
 
             </div>)
 }):<></>}

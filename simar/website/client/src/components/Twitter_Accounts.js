@@ -34,7 +34,7 @@ const Twitter_Account = () => {
     <div className="App">
       <form>
         <input className="twitterAccountInput"
-          placeholder="Enter Search filed"
+          placeholder="Enter Search Field ..."
           onChange={(e) => {
             set_search_query(e.target.value);
           }}
@@ -60,7 +60,7 @@ const Twitter_Account = () => {
                   <h3>ID : {item.id}</h3>
                   <h3>ID Link : {item.id_link}</h3>
                   <h3>Name : {item.name}</h3>
-                  <h3>Profile Pic Link : {item.profile_pic_link}</h3>
+                  {/* <h3>Profile Pic Link : {item.profile_pic_link}</h3> */}
                 </div>
 
               </div>

@@ -13,4 +13,31 @@
 .redditDataCard{
     border-style: solid;
     font-size: 0.6vw;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0);
+border-radius: 5px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.5px);
+-webkit-backdrop-filter: blur(4.5px);
+border: 1px solid rgba(255, 255, 255, 1);
+width: 30vw;
+color: white;
+text-shadow: 1px 1px black;
+margin: 10px;
+}
+
+.span-reddit{
+    animation:fluctuateAnimation 5s infinite;
+}
+
+@keyframes fluctuateAnimation{
+    0%{
+        color:white;
+    }
+    50%{
+        color:red;
+    }
+    100%{
+        color:white;
+    }
 }
