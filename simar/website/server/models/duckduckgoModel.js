@@ -12,11 +12,11 @@ const ddgosearchSchema = new mongoose.Schema({
     required: true,
     type: String,
   },
-  news_link: {
+  "news-link": {
     required: true,
     type: String,
   },
-  image_url: {
+  image: {
     required: true,
     type: String,
   },

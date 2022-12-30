@@ -41,7 +41,7 @@ app.use("/sockpuppet", require("./routes/sockpuppet_generator"));
 app.use("/tweets", require("./routes/top_tweet_scrap_route"));
 app.use("/people", require("./routes/top_people_scrap_route"));
 
-//DB insertion operations
+//DB data insertion operations
 app.get(
   "/save_twitter_accounts",
   require("./controllers/twitter_accounts_to_DB")
@@ -51,6 +51,29 @@ app.get("/save_reditcontent", require("./controllers/redit_to_DB"));
 app.get("/save_duckduckgo", require("./controllers/duckduck_go_to_DB"));
 app.get("/save_sockpuppet", require("./controllers/sockpuppet_to_DB"));
 app.get("/save_sherlock", require("./controllers/sherlock_json_to_DB"));
+
+//DB data fetching operations
+app.get(
+  "/fetch_sockpuppet",
+  require("./controllers/DB data fetching/sockpuppet_db")
+);
+app.get("/fetch_redit", require("./controllers/DB data fetching/redit_DB"));
+app.get(
+  "/fetch_duckduckgo",
+  require("./controllers/DB data fetching/duckduckgo_DB")
+);
+app.get(
+  "/fetch_sherlock",
+  require("./controllers/DB data fetching/sherloack_DB")
+);
+app.get(
+  "/fetch_twitteraccounts",
+  require("./controllers/DB data fetching/twitter_accounts_DB")
+);
+app.get(
+  "/fetch_twittertweets",
+  require("./controllers/DB data fetching/twitter_tweets_DB")
+);
 
 //duckduckGo Operations
 const { runPythonDuck } = require("./json-code/duckduckgo-linker/index");
