@@ -12,11 +12,15 @@ import Button from '@mui/material/Button';
 const Sockpuppet = () => {
   const [sockpuppetdata, setsockpuppetdata] = useState();
   const [button_state, set_button_state] = useState(true);
+  const [imgLink,setImgLink]=useState('');
+
   const getsockpuppetdata = async () => {
     const sockpuppet_data = await axios.get("http://localhost:3001/sockpuppet");
     console.log(sockpuppet_data.data.data);
     setsockpuppetdata(sockpuppet_data.data.data);
     set_button_state(true);
+    //this persondoesnotexist image link
+    setImgLink("https://thispersondoesnotexist.com/image");
   };
 
   return (
@@ -32,6 +36,10 @@ const Sockpuppet = () => {
       <div>
         {sockpuppetdata && (
           <div className="mainsockCardDiv">
+             <div className="sockpuppetcardDiv">
+              {/* <h4 className="sockfirst">Photo :</h4> */}
+              <img style={{height:'100px'}} src={imgLink} />
+            </div>
             <div className="sockpuppetcardDiv">
               <h4 className="sockfirst">Name :</h4>
               <h4 className="socksecond">{sockpuppetdata.Name}</h4>
