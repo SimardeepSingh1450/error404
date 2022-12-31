@@ -28,8 +28,6 @@
 
 #### Social Media Platforms Targeted => [Twitter](https://twitter.com) and [reddit](https://reddit.com)
 
-## Tech Stack
-
 # Python Libraries Used
 
 #### 1. Beautiful Soup
@@ -69,3 +67,7 @@ npm start
 ```
 node index.js
 ```
+## Tech Stack Used :
+
+#### React , Node ,Express , MongoDB , Python and various npm packages and libraries .
+
