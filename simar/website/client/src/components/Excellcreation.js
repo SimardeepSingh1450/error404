@@ -48,7 +48,7 @@ const Excellcreation = () => {
             Google Search
           </CSVLink>
           <CSVLink className="linksexcel" data={data4} onClick={() => {}}>
-            Redit
+            Reddit
           </CSVLink>
           <CSVLink className="linksexcel" data={data5} onClick={() => {}}>
             Twitter Accounts
