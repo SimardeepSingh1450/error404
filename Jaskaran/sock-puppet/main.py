@@ -1,10 +1,22 @@
 from bs4 import BeautifulSoup
 import requests
 import json
+from flask_cors import CORS, cross_origin
+from flask import Flask,jsonify
+
+app=Flask(__name__)
+CORS(app)
 
 
-
-def createSockPuppet(url):
+@app.route('/sockgenerator')
+def createSockPuppet():
+    # nameset=query1
+    # country=query2
+    # gender=query3
+    nameset="us"
+    gender="random"
+    country="us"
+    url = f"https://www.fakenamegenerator.com/gen-{gender}-{nameset}-{country}.php"
     htmlPage = requests.get(url, headers={'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:107.0) Gecko/20100101 Firefox/107.0"})
     doc = BeautifulSoup(htmlPage.text, "html.parser")
     info = {}
@@ -27,12 +39,16 @@ def createSockPuppet(url):
     return info
 
 
-nameset = "us"
-country = "us"
-gender = "random"
-url = f"https://www.fakenamegenerator.com/gen-{gender}-{nameset}-{country}.php"
-filename = "output.json"
-with open(filename, 'w') as f:
-    info = createSockPuppet(url)
-    json.dump(info, f, indent=4)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8000, debug=True)
+
+# nameset = "us"
+# country = "us"
+# gender = "random"
+
+# url = f"https://www.fakenamegenerator.com/gen-{gender}-{nameset}-{country}.php"
+# filename = "output.json"
+# with open(filename, 'w') as f:
+#     info = createSockPuppet(url)
+#     json.dump(info, f, indent=4)
 
